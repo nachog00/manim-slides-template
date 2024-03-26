@@ -1,17 +1,18 @@
-from manim import *
+from manim import (FadeIn, FadeOut, MoveAlongPath, Square, Dot, Text, Tex, VGroup, DOWN, UP, RIGHT, BLUE, RED, linear)
 from manim_slides import Slide
 
 
 class Introduction(Slide):
     def construct(self):
+        self.next_slide(notes="This is the first slide of the presentation")
         welcome = Text("This is the Manim Slides starter")
         square = Square(color=BLUE)
         dot = Dot(color=RED).shift(RIGHT + UP)
 
         self.play(FadeIn(welcome))
-        self.next_slide()
-
+        self.next_slide(notes="This is the second slide of the presentation")
         self.wipe(welcome, square)
+
         self.play(FadeIn(dot))
 
         self.next_slide(loop=True)
@@ -30,7 +31,6 @@ class WithTeX(Slide):
         self.next_slide()
 
         self.play(FadeIn(text, shift=DOWN))
-
 
 class Outro(Slide):
     def construct(self):
