@@ -23,13 +23,13 @@
               data-background-color="black"
               data-background-video="index_assets/ce8a4697cd5ff89e19d264ee2e4e7b02aa13cf63ab3117b92d8448a4f0c2bd83.mp4"
               data-background-video-muted>
-              
+              <aside class="notes" data-markdown>This is the first slide of the presentation</aside>
             </section><section
               data-background-size='contain'
               data-background-color="black"
               data-background-video="index_assets/4bdc8631b78e26c296e53e3a09f5a118caf60ce8a9208ec7024e483978c0ac28.mp4"
               >
-              
+              <aside class="notes" data-markdown>This is the second slide of the presentation</aside>
             </section><section
               data-background-size='contain'
               data-background-color="black"
@@ -61,10 +61,11 @@
 
     <!-- To include plugins, see: https://revealjs.com/plugins/ -->
 
-    <!-- <script src="index.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/markdown/markdown.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/notes/notes.min.js"></script><!-- <script src="index.js"></script> -->
     <script>
       Reveal.initialize({
-        
+        plugins: [ RevealMarkdown, RevealNotes ],
         // The "normal" size of the presentation, aspect ratio will
         // be preserved when the presentation is scaled to fit different
         // resolutions. Can be specified using percentage units.
