@@ -4,7 +4,7 @@ import subprocess
 def render_slides(scenes):
     try:
         # Run the manim render CLI command
-        subprocess.run(["manim", "render", "slides.py", "-p", "-ql", *scenes])
+        subprocess.run(["manim", "render", "presentation.py", "-ql", *scenes])
         print("Slides rendered successfully!")
     except FileNotFoundError:
         print("Manim is not installed. Please install it using 'pip install manim'.")
