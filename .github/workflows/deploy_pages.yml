@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  FILE: 'slides.py'  # Source file where scenes are defined
+  FILE: 'presentation.py'  # Source file where scenes are defined
   MANIM: 'manim'  # manim or manimgl - which Manim renderer to use
   SCENES: 'Presentation'  # Space-separated list of scenes to render
   USES_TEX: true  # true or false - disabling this will make the action run faster
