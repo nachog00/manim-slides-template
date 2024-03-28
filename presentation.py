@@ -1,7 +1,7 @@
 from manim import *
 from manim_slides import Slide
-from src.slides.intro import intro
-from src.slides.slide1 import slide1
+from src.scenes.intro import intro
+from src.scenes.slide1 import slide1
 
 
 class Presentation(Slide):
