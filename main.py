@@ -13,7 +13,7 @@ def render_slides(scenes):
 def generate_html_presentation(scenes, output_file):
     try:
         # Run the manim-slides convert CLI command
-        subprocess.run(["manim-slides", "convert" , *scenes, output_file ])
+        subprocess.run(["manim-slides", "convert", "--use-template" , "src\\template.html" , *scenes, output_file ])
         print("HTML presentation generated successfully!")
     except FileNotFoundError:
         print(

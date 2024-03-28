@@ -79,7 +79,7 @@
         maxScale: {{ max_scale }},
 
         // Display presentation control arrows
-        controls: {{ controls }},
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -123,7 +123,7 @@
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: {{ hash }},
+        hash: true,
 
         // Flags if we should monitor the hash and change slides accordingly
         respondToHashChanges: {{ respond_to_hash_changes }},
@@ -151,7 +151,7 @@
         center: {{ center }},
 
         // Enables touch navigation on devices with touch input
-        touch: {{ touch }},
+        touch: true,
 
         // Loop the presentation
         loop: {{ loop }},
@@ -339,13 +339,5 @@
       Reveal.on( 'slidechanged', fixBase64VideoBackground );
       {%- endif %}
     </script>
-
-    {% if env['READTHEDOCS'] -%}
-    <style>
-      readthedocs-flyout, readthedocs-notification {
-        display: none;
-      }
-    </style>
-    {%- endif %}
   </body>
 </html>
