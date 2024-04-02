@@ -5,6 +5,8 @@ from ..constants import FONT_SIZES, STYLE, PRESENTATION_DETAILS
 
 def intro(scene: Slide):
     
+    #  TODO: try and make logos appear first, then shift to the side and give place to the texts
+    
     logo_iu = SVGMobject("src/assets/iu-logo.svg").scale(0.5)
     
     module_name = Text(
@@ -21,7 +23,6 @@ def intro(scene: Slide):
     
     module_group = VGroup(module_name, module_code).arrange(DOWN, buff=0.2).align_to(logo_iu, ORIGIN)
     header_right = VGroup(module_group, logo_iu).arrange(RIGHT, buff=0.5)
-    scene.add_to_canvas(header_right=header_right)
     # animate logo_ui moving to its place within header_rigth
     scene.play(Write(logo_iu))
     scene.play(Write(module_group))
@@ -45,13 +46,13 @@ def intro(scene: Slide):
 
     titles = VGroup(title, subtitle).arrange(DOWN, buff=0.2)
     header_left = VGroup(logo, titles).arrange(RIGHT, buff=0.2)
-    scene.add_to_canvas(header_left=header_left)
     
     scene.play(Write(initials), DrawBorderThenFill(circle), Write(titles))
     scene.next_slide()
     scene.play(header_left.animate.scale(0.4).to_corner(UL))
 
     header = VGroup(header_left, header_right)
+    scene.add_to_canvas(header=header)
 
     header.save_state()
     scene.play(header.animate.set_opacity(0.5))
