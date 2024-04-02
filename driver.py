@@ -1,4 +1,4 @@
-from src.slides.intro import intro
+from src.scenes.intro import intro
 from manim_slides import Slide
 import subprocess
 
@@ -9,3 +9,5 @@ class TestClass(Slide):
 
 if __name__ == "__main__":
     proccess = subprocess.run(["manim", "render", "driver.py", "-ql", "TestClass"])
+    # proccess = subprocess.run(["manim-slides", "convert", "TestClass" , "_site/test.html"])
+    
