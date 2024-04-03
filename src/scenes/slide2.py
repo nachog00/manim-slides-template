@@ -1,7 +1,8 @@
-from manim_slides import Slide
 from manim import *
+from ..classes.moving_camera_slide import MovingCameraSlide
+from ..utils.zoom_loop import zoom_loop
 
-def slide2(scene:Slide):
+def slide2(scene:MovingCameraSlide):
     slide_title = Text("Slide 2")
     scene.play(Write(slide_title))
     scene.next_slide(notes="Don't forget to tell about this!!!!!")
@@ -19,5 +20,7 @@ def slide2(scene:Slide):
     scene.play(Write(content))
     
     scene.next_slide()
+    
+    zoom_loop(scene, content, next_slide=True)
     
     # scene.wipe()

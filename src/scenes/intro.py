@@ -2,8 +2,9 @@ from manim import *
 from manim_slides import Slide
 from ..constants import FONT_SIZES, STYLE, PRESENTATION_DETAILS
 
+from ..classes.moving_camera_slide import MovingCameraSlide
 
-def intro(scene: Slide):
+def intro(scene: MovingCameraSlide):
     
     #  TODO: try and make logos appear first, then shift to the side and give place to the texts
     

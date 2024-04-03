@@ -1,3 +1,4 @@
+from manim import *
 from src.scenes.slide1 import slide1 as scene
 from manim_slides import Slide
 import subprocess
